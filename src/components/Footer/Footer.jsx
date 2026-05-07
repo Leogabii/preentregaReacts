@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import "./Footer.css";
+
+import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
+
 
 export const Footer = () => {
   const [nosotros, setNosotros] = useState([]);
@@ -26,12 +30,26 @@ export const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer__info">
-        <span className="footer__empresa">⌚ Relojería Cronos</span>
-        <span>Belgrano, CABA · cronos@relojeria.com</span>
-        <span>+54 11 4444-5555</span>
-      </div>
+<div className="footer__info">
+  <span className="footer__empresa">⌚ Relojería Cronos</span>
 
+  <div className="footer__socials">
+    <a href="https://instagram.com" target="_blank">
+      <FaInstagram />
+    </a>
+
+    <a href="https://tiktok.com" target="_blank">
+      <FaTiktok />
+    </a>
+
+    <a href="https://facebook.com" target="_blank">
+      <FaFacebookF />
+    </a>
+  </div>
+
+  <span>Belgrano, CABA · cronos@relojeria.com</span>
+  <span>+54 11 4444-5555</span>
+</div>
       <div className="footer__personas">
         {cargando && <p>Cargando equipo...</p>}
         {error && <p>Error: {error}</p>}
